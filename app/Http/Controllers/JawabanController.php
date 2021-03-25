@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class JawabanController extends Controller
 {
@@ -13,7 +16,9 @@ class JawabanController extends Controller
      */
     public function index()
     {
-        //
+        $jawaban = DB::table('JawabanKuisioner')->get();
+
+        return view('jawaban', ['jawaban' => $jawaban]);
     }
 
     /**

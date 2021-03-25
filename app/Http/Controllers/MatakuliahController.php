@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MatakuliahController extends Controller
 {
@@ -13,7 +16,9 @@ class MatakuliahController extends Controller
      */
     public function index()
     {
-        //
+        $matakuliah = DB::table('matakuliah')->get();
+
+        return view('matkul', ['matakuliah' => $matakuliah]);
     }
 
     /**

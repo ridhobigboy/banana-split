@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DosenController extends Controller
 {
@@ -13,7 +15,9 @@ class DosenController extends Controller
      */
     public function index()
     {
-        //
+        $dosen = DB::table('dosen')->get();
+
+        return view('dosen', ['dosen' => $dosen]);
     }
 
     /**

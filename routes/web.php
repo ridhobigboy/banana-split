@@ -22,3 +22,15 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
+
+Route::get('/jawaban', 'JawabanController@index')->name('jawaban.index');
+
+Route::get('/pertanyaan', 'KuisionerController@index')->name('pertanyaan.index');
+
+Route::get('kelas', 'KelasController@index');
+
+Route::get('dosen', 'DosenController@index');
+
+Route::get('prodi', 'ProdiController@index');
+
+Route::get('matkul', 'MatakuliahController@index');
