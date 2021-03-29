@@ -16,7 +16,7 @@ class KelasController extends Controller
      */
     public function index()
     {
-        $kelas = DB::table('kelas')->get();
+        $kelas = DB::table('kelass')->get();
 
         return view('kelas', ['kelas' => $kelas]);
     }

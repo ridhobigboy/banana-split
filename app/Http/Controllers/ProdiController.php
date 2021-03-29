@@ -16,7 +16,7 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        $prodi = DB::table('prodi')->get();
+        $prodi = DB::table('prodis')->get();
 
         return view('prodi', ['prodi' => $prodi]);
     }

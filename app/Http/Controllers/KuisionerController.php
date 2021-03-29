@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\KuisionerController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -15,9 +15,9 @@ class KuisionerController extends Controller
      */
     public function index()
     {
-        $pertanyaan = DB::table('kuisionerdosen')->get();
+        $pertanyaan = DB::table('kuisionerdosens')->get();
 
-        return view('adminlte.pertanyaan', compact('pertanyaan'));
+        return view('pertanyaan', compact('pertanyaan'));
     }
 
     /**

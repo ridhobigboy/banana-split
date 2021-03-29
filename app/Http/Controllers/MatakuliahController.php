@@ -16,7 +16,7 @@ class MatakuliahController extends Controller
      */
     public function index()
     {
-        $matakuliah = DB::table('matakuliah')->get();
+        $matakuliah = DB::table('matakuliahs')->get();
 
         return view('matkul', ['matakuliah' => $matakuliah]);
     }

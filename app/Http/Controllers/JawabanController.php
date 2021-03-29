@@ -16,7 +16,7 @@ class JawabanController extends Controller
      */
     public function index()
     {
-        $jawaban = DB::table('JawabanKuisioner')->get();
+        $jawaban = DB::table('jawabankuisioners')->get();
 
         return view('jawaban', ['jawaban' => $jawaban]);
     }

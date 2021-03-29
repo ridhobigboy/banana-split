@@ -15,7 +15,7 @@ class DosenController extends Controller
      */
     public function index()
     {
-        $dosen = DB::table('dosen')->get();
+        $dosen = DB::table('dosens')->get();
 
         return view('dosen', ['dosen' => $dosen]);
     }
