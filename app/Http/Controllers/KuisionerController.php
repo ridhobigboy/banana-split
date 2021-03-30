@@ -6,6 +6,11 @@ use App\Http\Controllers\KuisionerController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+//memanggil model kuisioner
+use App\Models\kuisionerdosen;
+
+//memredirect route
+use Illuminate\Routing\Rediretor;
 class KuisionerController extends Controller
 {
     /**

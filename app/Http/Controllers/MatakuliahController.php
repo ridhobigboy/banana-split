@@ -7,6 +7,12 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+//mengambil data dari model
+use App\Models\matakuliah;
+
+//meridericer route
+use Illuminate\Routing\Redirector;
+
 class MatakuliahController extends Controller
 {
     /**

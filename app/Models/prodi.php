@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class prodi extends Model
 {
     use HasFactory;
+    protected $table = "prodi";
+
+    protected $fillable = ['id','nama'];
+
+    public $timestamp = false;
 }

@@ -1,30 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dosen</title>
-</head>
-<body>
-    <h2>Dosen</h2>
-    <!-- <a href="/dosen/tambah">+ Tambah Dosen</a> -->
-    <br><br>
-    <table border="1">
-        <tr>
-            <th>id</th>
-            <th>nama</th>
-        </tr>
-        @foreach ($dosen as $d)
-            <tr>
-                <td>{{ $d->id}}</td>
-                <td>{{ $d->nama}}</td>
-                <!-- <td>
-                    <a href="/dosen/edit/{{ $d->id}}">Edit</a>
-                    <a href="/dosen/edit/{{ $d->id}}">Hapus</a>
-                </td> -->
-            </tr>
-        @endforeach
-    </table>
-</body>
-</html>
+@extends('adminlte::page')
+
+@section('title', 'Dosen')
+
+@section('content_header')
+    <h1>Dosen</h1>
+@stop
+
+@section('content')
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-header text-center">
+            <div class="card-body">
+                <br><br>
+            <table class="table table-bordered tabel-haver table-striped">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                $no = 0;
+                    foreach ($dosen as $d): $no++
+                    ?>
+                        <tr>
+                            <td><?php echo $no?></td>
+                            <td>{{$d->nama}}</td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+</div>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script>console.log('HI!')</script>
+@stop

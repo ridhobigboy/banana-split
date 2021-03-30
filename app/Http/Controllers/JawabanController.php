@@ -7,6 +7,12 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+//memanggil model jawaban
+use app\Models\jawabankuisioner;
+
+//meridirect ke route
+use Illuminate\Routing\Redirector;
+
 class JawabanController extends Controller
 {
     /**

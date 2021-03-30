@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Dosen extends Model
 {
     use HasFactory;
+    protected $table = "dosen";
+
+    protected $fillable = ['id','nama'];
+
+    public $timestamp = false;
 }

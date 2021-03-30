@@ -7,6 +7,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+//memanggil data dari model
+use App\Models\kelas;
+//meridirect router
+use Illuminate\Routing\Redirector;
 class KelasController extends Controller
 {
     /**
@@ -16,7 +20,7 @@ class KelasController extends Controller
      */
     public function index()
     {
-        $kelas = DB::table('kelass')->get();
+        $kelas = DB::table('kelas')->get();
 
         return view('kelas', ['kelas' => $kelas]);
     }

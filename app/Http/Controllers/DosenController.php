@@ -6,6 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+//memanggil model dosen
+use App\Models\Dosen;
+//meriderect route
+use Illuminate\Routing\Rediretor;
+
 class DosenController extends Controller
 {
     /**

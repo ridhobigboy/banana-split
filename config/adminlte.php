@@ -249,7 +249,7 @@ return [
         // ],
         [
             'text' => 'Chart',
-            'url'  => 'admin/settings',
+            'url'  => 'chart',
             // 'icon' => 'fas fa-fw fa-lock',
         ],
         [

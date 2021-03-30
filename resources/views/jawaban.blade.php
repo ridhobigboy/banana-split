@@ -1,38 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jawaban Kuisioner</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
-</head>
-<body>
-   <div class="container">
-       <div class="card">
-           <div class="card-body">
-            <h2>Jawaban Kuisioner</h2>
+@extends('adminlte::page')
 
-            <!-- <a href="/jawaban/tambah"> + Tambah Jawaban</a> -->
-            <br><br>
-            <table border="1">
-                <tr>
-                    <th>Id</th>
-                    <th>Jawaban</th>
-                </tr>
-                @foreach ($jawaban as $j)
-                    <tr>
-                        <td>{{ $j->id}}</td>
-                        <td>{{ $j->jawaban}}</td>
-                        <!-- <td>
-                            <a href="/jawaban/edit/{{ $j->id}}"> Edit</a>
-                            <a href="/jawaban/hapus/{{ $j->id}}"> Hapus</a>
-                        </td> -->
-                    </tr>
-                @endforeach
+@section('title', 'Jawaban Kuisioner')
+
+@section('content_header')
+    <h1>Jawaban Kuisioner</h1>
+@stop
+
+@section('content')
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-header text-center">
+            <div class="card-body">
+
+                {{-- jadi cara pemanggilan menggunakan Name kaya gini --}}
+                
+                <br><br>
+                <table class="table table-bordered table-haver table-striped">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Jawaban</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $no = 0;
+                        foreach ($jawaban as $j):$no++ ?>
+                        <tr>
+                            <td><?php echo $no ?></td>
+                            <td>{{$j->jawaban}}</td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+               
             </table>
            </div>
        </div>
    </div>
-</body>
-</html>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+

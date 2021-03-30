@@ -7,6 +7,12 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+//memanggil data dari model
+use App\Models\prodi;
+
+//meriderct kerouter
+use Illuminate\Routing\Redirector;
+
 class ProdiController extends Controller
 {
     /**

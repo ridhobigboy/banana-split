@@ -34,3 +34,5 @@ Route::get('dosen', [App\Http\Controllers\DosenController::class, 'index'])->nam
 Route::get('prodi', [App\Http\Controllers\ProdiController::class, 'index'])->name('prodi.index');
 
 Route::get('matkul', [App\Http\Controllers\MatakuliahController::class, 'index'])->name('matakuliah.index');
+
+Route::get('chart', [App\Http\Controllers\ChartController::class, 'index'])->name('chart.index');
